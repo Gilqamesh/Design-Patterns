@@ -10,6 +10,7 @@ namespace DuckNamespace
 class Duck
 {
 public:
+    virtual ~Duck() { }
     virtual void display() const;
     virtual void performFly() const;
     virtual void performQuack() const;
