@@ -1,5 +1,6 @@
 #include "CurrentConditions.hpp"
 #include "Log.hpp"
+#include "WeatherData.hpp"
 
 namespace WeatherNamespace
 {
@@ -10,12 +11,15 @@ CurrentConditions::CurrentConditions(Subject *subject)
     subject->registerObserver(this);
 }
 
-void CurrentConditions::update(float temperature, float humidity, float pressure)
+void CurrentConditions::update()
 {
-    this->temperature = temperature;
-    this->humidity = humidity;
-    (void)pressure;
-    display();
+    if (dynamic_cast<WeatherData *>(subject))
+    {
+        WeatherData *weatherData = dynamic_cast<WeatherData *>(subject);
+        this->temperature = weatherData->getTemperature();
+        this->humidity = weatherData->getHumidity();
+        display();
+    }
 }
 
 void CurrentConditions::display() const

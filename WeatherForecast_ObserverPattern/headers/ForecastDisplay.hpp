@@ -12,12 +12,11 @@ class ForecastDisplay : public Observer, public DisplayElement
 {
 private:
     Subject *subject;
-    float temperature;
-    float humidity;
+    float lastPressure;
     float pressure;
 public:
     ForecastDisplay(Subject *subject);
-    void update(float temp, float humidity, float pressure);
+    void update();
     void display() const;
 };
 

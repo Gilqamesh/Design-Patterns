@@ -16,15 +16,9 @@ private:
     float minTemp;
     float maxTemp;
     float avgTemp;
-    float minHumidity;
-    float maxHumidity;
-    float avgHumidity;
-    float minPressure;
-    float maxPressure;
-    float avgPressure;
 public:
     StatisticsDisplay(Subject *subject);
-    void update(float temp, float humidity, float pressure);
+    void update();
     void display() const;
 };
 

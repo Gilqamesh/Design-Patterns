@@ -13,29 +13,19 @@ void WeatherData::removeObserver(Observer *observer)
     observers.erase(observer);
 }
 
-void WeatherData::notifyObservers() const
+void WeatherData::notifyObservers()
 {
-    for (std::unordered_set<Observer *>::const_iterator cit = observers.begin(); cit != observers.end(); ++cit)
-        (*cit)->update(temperature, humidity, pressure);
+    if (hasChanged())
+    {
+        for (std::unordered_set<Observer *>::const_iterator cit = observers.begin(); cit != observers.end(); ++cit)
+            (*cit)->update();
+    }
+    clearChanged();
 }
 
-void WeatherData::getTemperature() const
+void WeatherData::measurementsChanged()
 {
-
-}
-
-void WeatherData::getHumidity() const
-{
-
-}
-
-void WeatherData::getPressure() const
-{
-
-}
-
-void WeatherData::measurementsChanged() const
-{
+    setChanged();
     notifyObservers();
 }
 
