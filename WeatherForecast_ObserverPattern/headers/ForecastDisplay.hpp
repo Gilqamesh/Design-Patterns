@@ -3,7 +3,7 @@
 
 # include "Observer.hpp"
 # include "DisplayElement.hpp"
-# include "Subject.hpp"
+# include "Observable.hpp"
 
 namespace WeatherNamespace
 {
@@ -11,11 +11,11 @@ namespace WeatherNamespace
 class ForecastDisplay : public Observer, public DisplayElement
 {
 private:
-    Subject *subject;
+    Observable *observable;
     float lastPressure;
     float pressure;
 public:
-    ForecastDisplay(Subject *subject);
+    ForecastDisplay(Observable *observable);
     void update();
     void display() const;
 };

@@ -5,18 +5,18 @@
 namespace WeatherNamespace
 {
 
-ForecastDisplay::ForecastDisplay(Subject *subject)
+ForecastDisplay::ForecastDisplay(Observable *observable)
 {
     pressure = 29.92f;
-    this->subject = subject;
-    subject->registerObserver(this);
+    this->observable = observable;
+    observable->registerObserver(this);
 }
 
 void ForecastDisplay::update()
 {
-    if (dynamic_cast<WeatherData *>(subject))
+    if (dynamic_cast<WeatherData *>(observable))
     {
-        WeatherData *weatherData = dynamic_cast<WeatherData *>(subject);
+        WeatherData *weatherData = dynamic_cast<WeatherData *>(observable);
         lastPressure = this->pressure;
         this->pressure = weatherData->getPressure();
         display();

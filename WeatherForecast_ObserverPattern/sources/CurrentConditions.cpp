@@ -5,17 +5,17 @@
 namespace WeatherNamespace
 {
 
-CurrentConditions::CurrentConditions(Subject *subject)
+CurrentConditions::CurrentConditions(Observable *observable)
 {
-    this->subject = subject;
-    subject->registerObserver(this);
+    this->observable = observable;
+    observable->registerObserver(this);
 }
 
 void CurrentConditions::update()
 {
-    if (dynamic_cast<WeatherData *>(subject))
+    if (dynamic_cast<WeatherData *>(observable))
     {
-        WeatherData *weatherData = dynamic_cast<WeatherData *>(subject);
+        WeatherData *weatherData = dynamic_cast<WeatherData *>(observable);
         this->temperature = weatherData->getTemperature();
         this->humidity = weatherData->getHumidity();
         display();

@@ -5,18 +5,18 @@
 namespace WeatherNamespace
 {
 
-StatisticsDisplay::StatisticsDisplay(Subject *subject)
+StatisticsDisplay::StatisticsDisplay(Observable *observable)
 {
     numberOfUpdates = 0;
-    this->subject = subject;
-    subject->registerObserver(this);
+    this->observable = observable;
+    observable->registerObserver(this);
 }
 
 void StatisticsDisplay::update()
 {
-    if (dynamic_cast<WeatherData *>(subject))
+    if (dynamic_cast<WeatherData *>(observable))
     {
-        WeatherData *weatherData = dynamic_cast<WeatherData *>(subject);
+        WeatherData *weatherData = dynamic_cast<WeatherData *>(observable);
         float temperature = weatherData->getTemperature();
         if (numberOfUpdates++ == 0)
             minTemp = maxTemp = avgTemp = temperature;

@@ -1,15 +1,15 @@
-#ifndef SUBJECT_HPP
-# define SUBJECT_HPP
+#ifndef OBSERVABLE_HPP
+# define OBSERVABLE_HPP
 
 namespace WeatherNamespace
 {
 
 class Observer;
 
-class Subject
+class Observable
 {
 public:
-    virtual ~Subject() { }
+    virtual ~Observable() { }
     virtual void registerObserver(Observer *observer) = 0;
     virtual void removeObserver(Observer *observer) = 0;
     virtual void notifyObservers() = 0;

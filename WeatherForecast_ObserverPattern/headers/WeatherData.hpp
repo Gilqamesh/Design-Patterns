@@ -1,14 +1,14 @@
 #ifndef WEATHERDATA_HPP
 # define WEATHERDATA_HPP
 
-# include "Subject.hpp"
+# include "Observable.hpp"
 # include "Observer.hpp"
 # include <unordered_set>
 
 namespace WeatherNamespace
 {
 
-class WeatherData : public Subject
+class WeatherData : public Observable
 {
 private:
     bool changed;
