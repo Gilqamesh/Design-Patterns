@@ -4,3 +4,7 @@
 	notified and updated automatically.
 3. Decorator Pattern: attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to
     subclassing for extending functionality.
+4. Factory Method Pattern: defines an interface for creating and object, but lets subclasses decide which class to instantiate.
+    Factory Method lets a class defer instantiation to subclasses.
+5. Abstract Factory Pattern: provides an interface for creating families of related or dependent objects without specifying
+    their concrete classes.
