@@ -8,8 +8,10 @@ namespace BeverageNamespace
 
 class CondimentDecorator : public Beverage
 {
+protected:
+    Beverage *beverage;
 public:
-    CondimentDecorator(const std::string &description);
+    CondimentDecorator(Beverage *beverage);
     virtual ~CondimentDecorator() { }
     virtual std::string getDescription() const = 0;
     virtual double cost() const = 0;

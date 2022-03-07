@@ -1,9 +1,9 @@
 #include "BeverageSimulator.hpp"
-#include "Mocha.hpp"
-#include "HouseBlend.hpp"
-#include "Espresso.hpp"
-#include "Whip.hpp"
-#include "Soy.hpp"
+#include "MochaDecorator.hpp"
+#include "HouseBlendBeverage.hpp"
+#include "EspressoBeverage.hpp"
+#include "WhipDecorator.hpp"
+#include "SoyDecorator.hpp"
 #include "Log.hpp"
 
 namespace BeverageNamespace
@@ -11,20 +11,20 @@ namespace BeverageNamespace
 
 void BeverageSimulator::main()
 {
-    Beverage *espresso = new Espresso();
+    Beverage *espresso = new EspressoBeverage();
     Log::println("Cost of " + espresso->getDescription() + ": " + std::to_string(espresso->cost()) + "$");
 
-    Beverage *houseBlend = new HouseBlend();
+    Beverage *houseBlend = new HouseBlendBeverage();
     Log::println("Cost of " + houseBlend->getDescription() + ": " + std::to_string(houseBlend->cost()) + "$");
 
-    espresso = new Whip(espresso);
+    espresso = new WhipDecorator(espresso);
     Log::println("Cost of " + espresso->getDescription() + ": " + std::to_string(espresso->cost()) + "$");
 
-    espresso = new Mocha(espresso);
-    espresso = new Mocha(espresso);
+    espresso = new MochaDecorator(espresso);
+    espresso = new MochaDecorator(espresso);
     Log::println("Cost of " + espresso->getDescription() + ": " + std::to_string(espresso->cost()) + "$");
 
-    espresso = new Soy(espresso);
+    espresso = new SoyDecorator(espresso);
     Log::println("Cost of " + espresso->getDescription() + ": " + std::to_string(espresso->cost()) + "$");
 }
 

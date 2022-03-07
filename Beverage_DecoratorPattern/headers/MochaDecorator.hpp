@@ -1,17 +1,15 @@
-#ifndef MOCHA_HPP
-# define MOCHA_HPP
+#ifndef MOCHADECORATOR_HPP
+# define MOCHADECORATOR_HPP
 
 # include "CondimentDecorator.hpp"
 
 namespace BeverageNamespace
 {
 
-class Mocha : public CondimentDecorator
+class MochaDecorator : public CondimentDecorator
 {
-private:
-    Beverage *beverage;
 public:
-    Mocha(Beverage *beverage);
+    MochaDecorator(Beverage *beverage);
     std::string getDescription() const;
     double cost() const;
 };

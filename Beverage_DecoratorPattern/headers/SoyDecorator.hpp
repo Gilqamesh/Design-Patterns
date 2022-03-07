@@ -1,17 +1,15 @@
-#ifndef WHIP_HPP
-# define WHIP_HPP
+#ifndef SOYDECORATOR_HPP
+# define SOYDECORATOR_HPP
 
 # include "CondimentDecorator.hpp"
 
 namespace BeverageNamespace
 {
 
-class Whip : public CondimentDecorator
+class SoyDecorator : public CondimentDecorator
 {
-private:
-    Beverage *beverage;
 public:
-    Whip(Beverage *beverage);
+    SoyDecorator(Beverage *beverage);
     std::string getDescription() const;
     double cost() const;
 };
