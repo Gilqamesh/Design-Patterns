@@ -8,3 +8,4 @@
     Factory Method lets a class defer instantiation to subclasses.
 4.2. Abstract Factory Pattern: provides an interface for creating families of related or dependent objects without specifying
     their concrete classes.
+5. Singleton Pattern: ensures a class has only one instance, and provides a global point of access to it.
