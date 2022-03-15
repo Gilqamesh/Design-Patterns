@@ -1,4 +1,4 @@
-name = singletonApp
+name = remoteApp
 compile_flags = -Wall -Wextra -Werror -std=c++11
 link_flags =
 compiler = clang++
