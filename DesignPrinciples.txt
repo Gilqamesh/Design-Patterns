@@ -6,3 +6,4 @@
 6. Dependency Inversion Principle: depend upon abstractions. Do not depend upon concrete classes.
 7. Principle of Least Knowledge: talk only to your immediate friends.
 8. The Hollywood Principle: Don't call us, we'll call you.
+9. A class should have only one reason to change.

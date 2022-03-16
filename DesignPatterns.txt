@@ -17,3 +17,7 @@
     that makes the subsystem easier to use.
 9. Template Pattern: defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets
     subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
+10. Iterator Pattern: provides a way to access the elements of an aggregate object sequentially without exposing its
+    underlying representation.
+11. Composite Pattern: allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients
+    treat individual objects and compositions of objects uniformly.
