@@ -1,0 +1,20 @@
+{
+    "Create Cpp Class": {
+        "scope": "cpp",
+        "prefix": "make class",
+        "body" : [
+            "#ifndef ${TM_FILENAME/(.*)[\\.](.*)/${1:/upcase}_${2:/upcase}/}",
+            "# define ${TM_FILENAME/(.*)[\\.](.*)/${1:/upcase}_${2:/upcase}/}",
+            "",
+            "class ${TM_FILENAME/(.*)[\\.](.*)/${1}/}",
+            "{",
+            "private:",
+            "public:",
+            "};",
+            "",
+            "#endif",
+            ""
+        ],
+        "description": "Create a basic c++ class in a .hpp header file"
+    }
+}

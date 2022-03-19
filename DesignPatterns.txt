@@ -21,3 +21,6 @@
     underlying representation.
 11. Composite Pattern: allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients
     treat individual objects and compositions of objects uniformly.
+12. State Pattern: allows an object to alter its behavior when its internal state changes. The object will appear to
+    change its class.
+13. Proxy Pattern: provides a surrogate or placeholder for another object to control access to it.
