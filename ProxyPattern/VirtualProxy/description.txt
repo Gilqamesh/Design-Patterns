@@ -1,0 +1,3 @@
+Acts as a representative for an object that may be expensive to create. The Virtual Proxy often defers the creation
+of an object before and while it is being created. After that, the proxy delegates requests directly to the
+real subject.

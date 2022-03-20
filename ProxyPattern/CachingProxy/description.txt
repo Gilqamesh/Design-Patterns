@@ -1,0 +1,2 @@
+Provides temporary storage for results of operations that are expensive. It can also allow multiple clients to share
+the results to reduce computation or network latency.

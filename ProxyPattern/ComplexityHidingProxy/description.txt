@@ -1,0 +1,3 @@
+Hides the complexity of and controls access to a complex set of classes. This is sometimes called the Facade Proxy
+for obvious reasons. The Complexity Hiding Proxy differs from the Facade Pattern in that the proxy controls access,
+while the Facade Pattern just provides an alternative interface.

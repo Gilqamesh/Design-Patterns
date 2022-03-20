@@ -1,0 +1,3 @@
+Acts as a local representative for an object that lives in a different network. A method call on the proxy results in
+the call being transferred over the wire, invoked remotely, and the result being returned back to the proxy and then
+to the Client.

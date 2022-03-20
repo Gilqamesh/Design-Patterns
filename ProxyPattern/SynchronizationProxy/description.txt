@@ -1,0 +1,1 @@
+Provides safe access to a subject from multiple threads.

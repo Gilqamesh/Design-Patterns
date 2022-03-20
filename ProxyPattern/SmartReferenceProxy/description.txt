@@ -1,0 +1,1 @@
+Provides additional actions whenever a subject is referenced, such as counting the number of references to an object.

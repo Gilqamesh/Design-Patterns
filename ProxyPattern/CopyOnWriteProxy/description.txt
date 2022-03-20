@@ -1,0 +1,2 @@
+Controls the copying of an object by deferring the copying of an object until it is requires by a client.
+This is a variant of the Virtual Proxy
