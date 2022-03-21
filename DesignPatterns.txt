@@ -24,3 +24,25 @@
 12. State Pattern: allows an object to alter its behavior when its internal state changes. The object will appear to
     change its class.
 13. Proxy Pattern: provides a surrogate or placeholder for another object to control access to it.
+14. Compound Pattern: combines two or more patterns into a solution that solves a recurring or general problem.
+15. MVC: type of compound pattern, consisting of Observer, Strategy and Composite patterns.
+
+Design Pattern Definition: A pattern is a solution to a problem in a context.
+    - The Context is the situation in which the pattern applies. This should be a recurring situation.
+    - The Problem refers to the goal you are trying to achieve in this context, but it also refers to
+        any constraints that occur in the context.
+    - The Solution is what you're after: a general design that anyone can apply which resolves the goal
+        and set of constraints.
+
+"If you find yourself in a context with a problem that has a goal that is affected by a set of constaints,
+    then you can apply a design that resolves the goal and constraints and leads to a solution."
+
+Design Pattern Classifications
+    - Creational Patterns: involve object instantiation and all provide a way to decouple a client from
+        the objects it needs to instantiate
+    - Behavioral Patterns: is concerned with how classes and objects interact and distribute responsibility
+    - Structural Patterns: let you compose classes or objects into larger structures
+
+Always start from design principles and create the simplest code (KISS) you can that does the job. However,
+if you see the need for a pattern emerge, then use it. While designing, building with patterns shoulnd't be the goal.
+Let patterns emerge naturally as your design progresses.
