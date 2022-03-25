@@ -1,0 +1,9 @@
+1. Tokenizer: Breaks the string into tokens based on Nonterminal Expressions and Metacharacters
+    example string with Nonterminal Expressions: "+", "*"
+                        Metacharaters: ")", "("
+    "(5+3)*8" -> "(", "5", "+", "3", ")", "*", "8"
+2. Parser: Dispatches token and builds AST as a result
+        Backaus-Naur Form
+        <expression> ::= <term> [ <addop> <term> ]*
+        <term>       ::= <factor> [ <mulop> <factor> ]*
+        <factor>     ::= (<expression>)
