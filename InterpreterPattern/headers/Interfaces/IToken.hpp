@@ -10,6 +10,7 @@ enum class TokenType
     addition,
     subtraction,
     multiplication,
+    division,
     leftpar,
     rightpar
 };

@@ -5,6 +5,7 @@
 #include "Tokens/LeftparToken.hpp"
 #include "Tokens/RightparToken.hpp"
 #include "Tokens/NumberToken.hpp"
+#include "Tokens/DivisionToken.hpp"
 #include "Singletons/Singleton.hpp"
 #include <exception>
 #include <iostream>
@@ -16,6 +17,7 @@ ExpressionTokenizer::ExpressionTokenizer()
     nonterminalTokens["+"] = Singleton<AdditionToken>::getInstance();
     nonterminalTokens["-"] = Singleton<SubtractionToken>::getInstance();
     nonterminalTokens["*"] = Singleton<MultiplicationToken>::getInstance();
+    nonterminalTokens["/"] = Singleton<DivisionToken>::getInstance();
 
     metacharacters.insert(' ');
     metacharacters.insert('\t');
