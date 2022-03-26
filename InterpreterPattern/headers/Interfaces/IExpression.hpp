@@ -1,6 +1,9 @@
 #ifndef IEXPRESSION_HPP
 # define IEXPRESSION_HPP
 
+/*
+ * Compound Pattern
+ */
 class IExpression
 {
 public:
